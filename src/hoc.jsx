@@ -28,7 +28,7 @@ function clickCountHOC(WrappedComponent) {
         render() {
             return (
                 <div className="wrapped" onClick={this.handleClick.bind(this)}>
-                    <WrappedComponent />
+                    <WrappedComponent {...this.props} {...this.state} />
                 </div>
             )
         }
